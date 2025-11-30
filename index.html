@@ -1,540 +1,856 @@
+<!--
+================================================================================
+  Sibghatullah Portfolio - Ubuntu-Inspired Theme
+================================================================================
+  
+  CHANGELOG v2.0.0 (November 2025):
+  --------------------------------
+  - Refactored inline CSS to external stylesheet (assets/css/styles.css)
+  - Refactored inline JS to external script (assets/js/main.js)
+  - Added mobile-first responsive design with breakpoints at 480px, 768px, 1024px
+  - Added accessible hamburger menu for mobile navigation
+  - Added skip link for keyboard accessibility
+  - Added ARIA labels and roles throughout
+  - Added JSON-LD structured data for SEO
+  - Added Open Graph and Twitter Card meta tags
+  - Added semantic HTML5 elements (header, main, section, article, footer)
+  - Added project modal with keyboard accessibility
+  - Added data-driven project loading from projects.json
+  - Added filter chips for project categories
+  - Added skill bars with proficiency levels
+  - Added contact form with validation (Formspree integration)
+  - Added proper heading hierarchy (h1 → h2 → h3)
+  - Added loading="lazy" and alt text for all images
+  - Added focus states and reduced motion support
+  - Improved color contrast for WCAG 2.1 AA compliance
+  - Added print styles
+  
+  Color Palette (Ubuntu-inspired, WCAG compliant):
+  - Primary Background: #f7f5f3 (light) / #2c001e (dark)
+  - Card Background: #ffffff (light) / rgba(48,10,36,0.8) (dark)
+  - Accent Primary: #e95420 (Ubuntu Orange)
+  - Accent Secondary: #77216f (Ubuntu Purple)
+  - Text Primary: #1a1a1a (light) / #ffffff (dark)
+  - Text Secondary: #4a4a4a (light) / #e0e0e0 (dark)
+  
+  Author: Sibghatullah
+  Repository: https://github.com/Sibghatullah-pk/sibghat_port
+================================================================================
+-->
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>Sibghatullah - Ubuntu-Inspired IT & Dev Portfolio</title>
-    <meta name="description" content="Sibghatullah - Ubuntu-themed portfolio: web dev, Android, security, networking, DevOps. Community-driven, open-source vibe with a modern twist." />
-    <link rel="icon" href="./assets/images/img.jpg" />
-    <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono:wght@400;700&family=Ubuntu:wght@400;700&display=swap" rel="stylesheet">
-
+<html lang="en" class="no-js">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- Primary Meta Tags -->
+  <title>Sibghatullah | Web & Android Developer | BSIT Student Portfolio</title>
+  <meta name="title" content="Sibghatullah | Web & Android Developer | BSIT Student Portfolio">
+  <meta name="description" content="Sibghatullah - BSIT student at Air University, Rawalpindi. Portfolio showcasing web development, Android apps, security projects, and networking. Available for freelance work on Fiverr.">
+  <meta name="keywords" content="Sibghatullah, web developer, Android developer, BSIT, portfolio, React, Node.js, Flutter, Firebase, freelancer, Fiverr">
+  <meta name="author" content="Sibghatullah">
+  <meta name="robots" content="index, follow">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://sibghatullah-pk.github.io/sibghat_port/">
+  <meta property="og:title" content="Sibghatullah | Web & Android Developer Portfolio">
+  <meta property="og:description" content="BSIT student showcasing web development, Android apps, security projects, and networking. Available for freelance work.">
+  <meta property="og:image" content="https://sibghatullah-pk.github.io/sibghat_port/assets/images/img.jpg">
+  <meta property="og:locale" content="en_US">
+  
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://sibghatullah-pk.github.io/sibghat_port/">
+  <meta name="twitter:title" content="Sibghatullah | Web & Android Developer Portfolio">
+  <meta name="twitter:description" content="BSIT student showcasing web development, Android apps, security projects, and networking.">
+  <meta name="twitter:image" content="https://sibghatullah-pk.github.io/sibghat_port/assets/images/img.jpg">
+  
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://sibghatullah-pk.github.io/sibghat_port/">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/jpeg" href="./assets/images/img.jpg">
+  <link rel="apple-touch-icon" href="./assets/images/img.jpg">
+  
+  <!-- Preconnect for performance -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono:wght@400;700&family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet">
+  
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="./assets/css/styles.css">
+  
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Sibghatullah",
+    "url": "https://sibghatullah-pk.github.io/sibghat_port/",
+    "image": "https://sibghatullah-pk.github.io/sibghat_port/assets/images/img.jpg",
+    "jobTitle": "Web & Android Developer",
+    "description": "BSIT student at Air University, Rawalpindi. Aspiring IT professional exploring web development, Android apps, security, and networking.",
+    "email": "sibghatullah1a2a3a@gmail.com",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Rawalpindi",
+      "addressCountry": "Pakistan"
+    },
+    "sameAs": [
+      "https://github.com/Sibghatullah-pk",
+      "https://www.linkedin.com/in/sibghat-ullah-8490aa279",
+      "https://www.instagram.com/sibghat_.ullah/",
+      "https://www.fiverr.com/sibghatullah1a2a3a"
+    ],
+    "knowsAbout": ["HTML", "CSS", "JavaScript", "React", "Node.js", "Flutter", "React Native", "Firebase", "MongoDB", "Azure", "C++"],
+    "alumniOf": {
+      "@type": "CollegeOrUniversity",
+      "name": "Air University",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Rawalpindi",
+        "addressCountry": "Pakistan"
+      }
+    }
+  }
+  </script>
+  
+  <!-- No-JS fallback styling -->
+  <noscript>
     <style>
-      :root {
-        --bg: #300a24; /* Ubuntu purple dark */
-        --card: #ffffff;
-        --muted: #a8a8a8;
-        --accent: #e95420; /* Ubuntu orange */
-        --accent-2: #77216f; /* Ubuntu purple */
-        --glass: rgba(255,255,255,0.1);
-        --glow: 0 8px 30px rgba(233,84,32,0.15); /* Orange glow */
-        --mono: 'Ubuntu Mono', monospace;
-        --sans: 'Ubuntu', sans-serif;
-      }
-      [data-theme="dark"] {
-        --bg: #2c001e; /* Deeper purple */
-        --card: rgba(48,10,36,0.7); /* Semi-transparent purple */
-        --muted: #d0d0d0;
-        --accent: #e95420;
-        --accent-2: #77216f;
-        --glass: rgba(255,255,255,0.05);
-        --glow: 0 10px 40px rgba(233,84,32,0.08);
-      }
-      * { box-sizing: border-box; }
-      html, body {
-        height: 100%;
-        margin: 0;
-        font-family: var(--sans);
-        background: linear-gradient(180deg, var(--bg), #100a1e); /* Ubuntu wallpaper gradient feel */
-        color: var(--muted);
-        -webkit-font-smoothing: antialiased;
-      }
-      .container { max-width: 1100px; margin: 0 auto; padding: 2rem; }
-      header {
-        position: fixed;
-        left: 0; right: 0; top: 0;
-        backdrop-filter: blur(6px);
-        background: var(--glass);
-        border-bottom: 1px solid rgba(255,255,255,0.03);
-        z-index: 40;
-        box-shadow: var(--glow);
-      }
-      .nav { display: flex; align-items: center; justify-content: space-between; padding: 0.8rem 1.25rem; }
-      .brand h1 { margin: 0; font-size: 1.1rem; color: var(--accent); letter-spacing: 0.6px; }
-      .brand h1 span { color: var(--accent-2); }
-      nav ul { display: flex; gap: 1rem; list-style: none; margin: 0; padding: 0; }
-      nav a { color: var(--muted); text-decoration: none; font-weight: 700; font-size: 0.95rem; }
-      nav a:hover { color: var(--accent); }
-      .controls { display: flex; gap: 0.6rem; align-items: center; }
-      .btn {
-        background: transparent;
-        border: 1px solid rgba(255,255,255,0.06);
-        padding: 0.4rem 0.6rem;
-        border-radius: 10px;
-        cursor: pointer;
-        color: var(--muted);
-      }
-      .btn.primary {
-        background: linear-gradient(90deg, var(--accent), var(--accent-2));
-        color: #fff;
-        box-shadow: var(--glow);
-        border: none;
-      }
-      #hero { min-height: 92vh; display: grid; align-items: center; }
-      .hero-grid { display: grid; grid-template-columns: 1fr 360px; gap: 2rem; align-items: center; }
-      .intro { padding: 2rem; }
-      .hi { font-size: 1.05rem; margin: 0; color: var(--muted); }
-      .name { font-size: 2.4rem; margin: 0.2rem 0; color: var(--card); line-height: 1.02; }
-      .tagline { font-size: 1rem; color: var(--muted); margin-bottom: 1.1rem; }
-      .cta-row { display: flex; gap: 0.8rem; align-items: center; }
-      .cta {
-        padding: 0.7rem 1.1rem;
-        border-radius: 12px;
-        border: none;
-        background: var(--accent);
-        color: #fff;
-        font-weight: 800;
-        cursor: pointer;
-      }
-      .ghost {
-        padding: 0.6rem 0.9rem;
-        border-radius: 10px;
-        border: 1px solid rgba(255,255,255,0.06);
-        background: transparent;
-        color: var(--muted);
-        cursor: pointer;
-      }
-      .terminal-typewriter {
-        display: inline-block;
-        color: var(--accent);
-        font-weight: 800;
-        font-family: var(--mono);
-        background: rgba(0,0,0,0.3);
-        padding: 0.2rem 0.4rem;
-        border-radius: 4px;
-        border: 1px solid var(--accent-2);
-      }
-      .profile-card {
-        background: linear-gradient(180deg, rgba(255,255,255,0.03), transparent);
-        padding: 1rem;
-        border-radius: 16px;
-        box-shadow: var(--glow);
-        backdrop-filter: blur(6px);
-        border: 1px solid rgba(255,255,255,0.04);
-      }
-      .avatar { width: 100%; height: 220px; border-radius: 50%; overflow: hidden; display: block; border: 2px solid var(--accent); } /* Circle for Ubuntu logo feel */
-      .avatar img { width: 100%; height: 100%; object-fit: cover; }
-      .skills { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-top: 0.8rem; }
-      .chip {
-        padding: 0.4rem 0.6rem;
-        border-radius: 999px;
-        font-weight: 700;
-        font-size: 0.8rem;
-        background: linear-gradient(90deg, rgba(233,84,32,0.12), rgba(119,33,111,0.06));
-        border: 1px solid rgba(255,255,255,0.03);
-        color: var(--muted);
-      }
-      .section { margin-top: 2.5rem; padding: 2rem 0; }
-      .section-title { font-size: 1.6rem; color: var(--card); margin-bottom: 0.6rem; }
-      .services-grid { display: grid; grid-template-columns: repeat(2,1fr); gap: 1rem; }
-      .card {
-        background: var(--card);
-        color: #061024;
-        padding: 1rem;
-        border-radius: 12px;
-        box-shadow: 0 12px 35px rgba(3,6,12,0.08);
-        border: 1px solid rgba(255,255,255,0.03);
-      }
-      .card h3 { margin: 0 0 0.6rem 0; }
-      .card p { margin: 0; color: var(--muted); }
-      .fun-note { font-size: 0.9rem; color: var(--muted); margin-top: 0.6rem; }
-      .projects-grid { display: grid; grid-template-columns: repeat(2,1fr); gap: 1rem; }
-      .project { overflow: hidden; border-radius: 12px; position: relative; }
-      .project img { width: 100%; height: 180px; object-fit: cover; display: block; transition: transform .45s; }
-      .project:hover img { transform: scale(1.08); }
-      .project-info {
-        position: absolute;
-        left: 0; right: 0; bottom: 0;
-        padding: 0.8rem;
-        background: linear-gradient(180deg, transparent, rgba(0,0,0,0.45));
-        color: #fff;
-      }
-      .project-info h4 { margin: 0; }
-      .about-grid { display: grid; grid-template-columns: 260px 1fr; gap: 1.2rem; align-items: center; }
-      .about-card { padding: 1rem; border-radius: 12px; background: var(--card); box-shadow: var(--glow); }
-      .terminal-about {
-        background: #300a24; /* Ubuntu terminal purple */
-        padding: 1rem;
-        border-radius: 8px;
-        font-family: var(--mono);
-        color: #ffffff;
-        white-space: pre-wrap;
-        box-shadow: inset 0 0 10px rgba(0,0,0,0.5);
-        margin-top: 1rem;
-      }
-      .contact-grid { display: flex; gap: 1rem; flex-wrap: wrap; }
-      .contact-item {
-        flex: 1;
-        min-width: 180px;
-        padding: 0.8rem;
-        border-radius: 10px;
-        background: linear-gradient(90deg, rgba(233,84,32,0.05), transparent);
-        border: 1px solid rgba(255,255,255,0.03);
-      }
-      footer { padding: 2rem 0; text-align: center; color: var(--muted); }
-      @media (max-width:900px) {
-        .hero-grid { grid-template-columns: 1fr; }
-        .projects-grid { grid-template-columns: 1fr; }
-        nav ul { display: none; }
-      }
-      .sparkle {
-        position: fixed;
-        right: 8px; bottom: 8px;
-        padding: 0.6rem 0.8rem;
-        border-radius: 12px;
-        background: linear-gradient(90deg, var(--accent), var(--accent-2));
-        color: #fff;
-        font-weight: 800;
-        box-shadow: var(--glow);
-      }
-      .floating-tech {
-        position: fixed;
-        left: 10px; top: 30%;
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
-        z-index: 20;
-      }
-      .floating-tech img {
-        width: 46px; height: 46px;
-        border-radius: 50%; /* Circle for Ubuntu feel */
-        box-shadow: 0 6px 18px rgba(0,0,0,0.12);
-        opacity: 0.95;
-      }
-      a:focus, button:focus { outline: 2px dashed rgba(233,84,32,0.3); outline-offset: 4px; }
-
-      /* Hand-drawn accent with Ubuntu twist */
-      .doodle { font-family: 'Ubuntu', cursive; color: var(--accent-2); font-size: 1.05rem; }
-
-      /* Fiverr badge */
-      .fiverr-badge {
-        display: inline-flex;
-        align-items: center;
-        gap: 8px;
-        padding: 0.45rem 0.6rem;
-        border-radius: 999px;
-        background: #1dbf73;
-        color: white;
-        font-weight: 800;
-        text-decoration: none;
-      }
-
-      /* Client chat mock with terminal feel */
-      .chat-demo {
-        position: fixed;
-        right: 18px; bottom: 90px;
-        width: 320px;
-        border-radius: 12px;
-        background: #300a24; /* Ubuntu terminal */
-        box-shadow: 0 15px 50px rgba(2,8,23,0.25);
-        overflow: hidden;
-        border: 1px solid var(--accent-2);
-        font-family: var(--mono);
-        color: #ffffff;
-      }
-      .chat-head {
-        padding: 0.6rem 0.9rem;
-        background: linear-gradient(90deg, var(--accent), var(--accent-2));
-        color: #fff;
-        font-weight: 800;
-      }
-      .chat-body {
-        padding: 0.6rem 0.9rem;
-        height: 160px;
-        overflow: auto;
-        font-size: 0.92rem;
-        color: #ffffff;
-      }
-      .chat-msg { margin: 0.5rem 0; padding: 0.45rem; border-radius: 8px; display: inline-block; }
-      .chat-msg.client { background: rgba(255,255,255,0.1); color: #ffffff; }
-      .chat-msg.me { background: linear-gradient(90deg, var(--accent), var(--accent-2)); color: #fff; }
-
-      /* Testimonials */
-      .testimonials { display: flex; gap: 10px; flex-wrap: wrap; }
-      .testimonial {
-        flex: 1;
-        min-width: 220px;
-        padding: 0.8rem;
-        border-radius: 10px;
-        background: linear-gradient(90deg, rgba(233,84,32,0.03), transparent);
-        border: 1px solid rgba(255,255,255,0.03);
-      }
-
-      /* Ubuntu boot animation subtle */
-      @keyframes boot-glow {
-        0% { opacity: 0; transform: scale(0.95); }
-        100% { opacity: 1; transform: scale(1); }
-      }
-      main { animation: boot-glow 1.5s ease-out; }
-
+      .no-js .projects-grid { display: none; }
+      .no-js .projects-list { display: block; }
+      .no-js .filter-chips { display: none; }
     </style>
-  </head>
+  </noscript>
+</head>
 
-  <body>
-    <header>
-      <div class="nav container">
-        <div class="brand"><h1><span>S</span>ibghat <span>U</span>llah</h1></div>
-        <nav>
-          <ul>
-            <li><a href="#hero">Home</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
-        </nav>
-        <div class="controls">
-          <button id="themeToggle" class="btn" aria-label="Toggle theme">🌗</button>
-          <a class="btn primary" href="#contact">Let's build</a>
-        </div>
+<body>
+  <!-- Skip Link for Accessibility -->
+  <a href="#main" class="skip-link">Skip to main content</a>
+  
+  <!-- ====================================================================
+       Header & Navigation
+       ==================================================================== -->
+  <header class="header" role="banner">
+    <div class="container header__inner">
+      <!-- Brand -->
+      <a href="#hero" class="brand" aria-label="Sibghatullah - Home">
+        <span class="brand__name"><span>S</span>ibghat<span>U</span>llah</span>
+      </a>
+      
+      <!-- Desktop Navigation -->
+      <nav class="nav" role="navigation" aria-label="Main navigation">
+        <ul class="nav__list">
+          <li><a href="#hero" class="nav__link nav__link--active">Home</a></li>
+          <li><a href="#skills" class="nav__link">Skills</a></li>
+          <li><a href="#services" class="nav__link">Services</a></li>
+          <li><a href="#projects" class="nav__link">Projects</a></li>
+          <li><a href="#about" class="nav__link">About</a></li>
+          <li><a href="#contact" class="nav__link">Contact</a></li>
+        </ul>
+      </nav>
+      
+      <!-- Header Controls -->
+      <div class="header__controls">
+        <button id="themeToggle" class="btn btn--icon theme-toggle" aria-label="Toggle dark mode">🌙</button>
+        <a href="#contact" class="btn btn--primary">Let's Connect</a>
+        
+        <!-- Mobile Nav Toggle -->
+        <button class="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mobileNav">
+          <span class="nav-toggle__bar"></span>
+          <span class="nav-toggle__bar"></span>
+          <span class="nav-toggle__bar"></span>
+        </button>
       </div>
-    </header>
-
-    <main class="container">
-      <section id="hero">
-        <div class="hero-grid">
-          <div class="intro">
-            <p class="hi">Hey - I ship open-source inspired projects with a community vibe ✨</p>
-            <h2 class="name">I’m <span style="color:var(--accent)">Sibghatullah</span> -<span class="terminal-typewriter" id="typewriter"></span></h2>
-            <p class="tagline">Ubuntu-inspired maker: Balancing clean code with collaborative, accessible tech. From web to Android, security to networks - all with an open, human touch.</p>
-
-            <div class="cta-row">
-              <button class="cta" onclick="scrollTo('#projects')">View Work</button>
-              <button class="ghost" onclick="scrollTo('#contact')">Contact</button>
-              <a class="fiverr-badge" href="https://www.fiverr.com/sibghatullah1a2a3a" data-href="https://www.fiverr.com/sibghatullah1a2a3a">Hire me on Fiverr</a>
+    </div>
+  </header>
+  
+  <!-- Mobile Navigation -->
+  <nav id="mobileNav" class="nav-mobile" role="navigation" aria-label="Mobile navigation">
+    <ul class="nav-mobile__list">
+      <li><a href="#hero" class="nav-mobile__link">Home</a></li>
+      <li><a href="#skills" class="nav-mobile__link">Skills</a></li>
+      <li><a href="#services" class="nav-mobile__link">Services</a></li>
+      <li><a href="#projects" class="nav-mobile__link">Projects</a></li>
+      <li><a href="#about" class="nav-mobile__link">About</a></li>
+      <li><a href="#contact" class="nav-mobile__link">Contact</a></li>
+    </ul>
+  </nav>
+  
+  <!-- ====================================================================
+       Main Content
+       ==================================================================== -->
+  <main id="main" role="main">
+    
+    <!-- ================================================================
+         Hero Section
+         ================================================================ -->
+    <section id="hero" class="hero" aria-labelledby="hero-title">
+      <div class="container">
+        <div class="hero__grid">
+          <!-- Intro Content -->
+          <div class="hero__intro">
+            <p class="hero__greeting">Hey there! I build open-source inspired projects with a community vibe ✨</p>
+            
+            <h1 id="hero-title" class="hero__title">
+              I'm <span class="hero__title-accent">Sibghatullah</span>
+              <br>
+              <span class="hero__typewriter" id="typewriter" aria-live="polite">Web Developer</span>
+            </h1>
+            
+            <p class="hero__tagline">
+              BSIT student at Air University, Rawalpindi. Building clean, accessible tech — from responsive websites to Android apps, with a focus on security and networking. One year into my journey, learning fast and shipping projects.
+            </p>
+            
+            <div class="hero__cta">
+              <a href="#projects" class="btn btn--primary btn--lg" onclick="scrollToSection('#projects'); return false;">View My Work</a>
+              <a href="SIBGHATULLAH_BSIT_resume.pdf" class="btn btn--secondary btn--lg" download>Download Resume</a>
+              <a href="https://www.fiverr.com/sibghatullah1a2a3a" class="fiverr-badge" target="_blank" rel="noopener noreferrer">
+                <span>🟢</span> Hire me on Fiverr
+              </a>
             </div>
-
-            <p class="fun-note">Pro-tip: Like Ubuntu, I focus on reliability + community. Every gig includes a demo and open communication.</p>
+            
+            <p class="hero__note">
+              💡 Pro tip: Like Ubuntu, I focus on reliability + community. Every project includes documentation and open communication.
+            </p>
           </div>
-
-          <aside class="profile-card" aria-label="profile card">
-            <div class="avatar"><img src="./assets/images/img.jpg" alt="Sibghatullah photo" /></div>
-            <div style="margin-top:0.8rem;display:flex;justify-content:space-between;align-items:center">
-              <div>
-                <div style="font-weight:800;color:var(--accent)">Beginner → Building fast</div>
-                <div style="color:var(--muted);font-size:0.9rem">BSIT • DevOps learner • InfoSec curious</div>
-              </div>
-              <div class="chip">Open to Projects</div>
+          
+          <!-- Profile Card -->
+          <aside class="profile-card" aria-label="Profile summary">
+            <div class="profile-card__avatar">
+              <!-- TODO: Replace with optimized image (recommended: 400x400px WebP) -->
+              <img src="./assets/images/img.jpg" alt="Sibghatullah - Web and Android Developer" loading="eager" width="200" height="200">
             </div>
-
-            <div class="skills">
-              <div class="chip">HTML</div>
-              <div class="chip">CSS</div>
-              <div class="chip">JavaScript</div>
-              <div class="chip">React</div>
-              <div class="chip">Node.js</div>
-              <div class="chip">Flutter</div>
-              <div class="chip">React Native</div>
-              <div class="chip">Firebase</div>
-              <div class="chip">MongoDB</div>
-              <div class="chip">Azure</div>
-              <div class="chip">C++</div>
+            
+            <div class="profile-card__info">
+              <span class="profile-card__status">Beginner → Building Fast</span>
+              <p class="profile-card__subtitle">BSIT • DevOps Learner • InfoSec Curious</p>
+              <span class="profile-card__availability">🟢 Open to Projects</span>
             </div>
-
-            <p style="margin-top:0.8rem;color:var(--muted)"><span class="doodle">"Code like it's open source."</span> - my approach: share, collaborate, improve.</p>
+            
+            <div class="skill-chips">
+              <span class="skill-chip">HTML</span>
+              <span class="skill-chip">CSS</span>
+              <span class="skill-chip">JavaScript</span>
+              <span class="skill-chip">React</span>
+              <span class="skill-chip">Node.js</span>
+              <span class="skill-chip">Flutter</span>
+              <span class="skill-chip">Firebase</span>
+              <span class="skill-chip">MongoDB</span>
+              <span class="skill-chip">Azure</span>
+              <span class="skill-chip">C++</span>
+            </div>
+            
+            <p class="profile-card__quote">
+              <span>"Code like it's open source."</span> — My approach: share, collaborate, improve.
+            </p>
           </aside>
         </div>
-      </section>
-
-      <section id="services" class="section">
-        <h3 class="section-title">What I do  Fiverr Gigs with Ubuntu Reliability</h3>
-        <div class="services-grid">
-          <div class="card">
-            <h3>Web + Android with Shared Backend</h3>
-            <p><strong>Gig:</strong> Build responsive website and Android app sharing a single backend (Node.js/Firebase). Seamless, real-time data sync.</p>
-            <p class="fun-note">Like Ubuntu's unity: one ecosystem, multiple devices. Includes deployment on Azure.</p>
-            <a class="fiverr-badge" style="margin-top:0.6rem" href="https://www.fiverr.com/s/5rLWLrk">View Gig</a>
-          </div>
-
-          <div class="card">
-            <h3>Convert Website to Android App</h3>
-            <p><strong>Gig:</strong> Transform your site into a native-feeling Android app with offline access, push notifications, and app store prep.</p>
-            <p class="fun-note">Mobile-first, like Ubuntu Touch. Quick turnaround for startups and students.</p>
-            <a class="fiverr-badge" style="margin-top:0.6rem" href="https://www.fiverr.com/s/VY1x1Yx">View Gig</a>
-          </div>
-
-          <div class="card">
-            <h3>Design & Deploy Responsive Website</h3>
-            <p><strong>Gig:</strong> Modern, SEO-friendly site with React/Flask, deployed on Azure/Hostinger. Mobile-first and scalable.</p>
-            <p class="fun-note">Built to last, like Ubuntu LTS. Includes CI/CD for easy updates.</p>
-            <a class="fiverr-badge" style="margin-top:0.6rem" href="https://www.fiverr.com/s/jjrNryZ">View Gig</a>
-          </div>
-
-          <div class="card">
-            <h3>Security & Networking Demos</h3>
-            <p><strong>Gig idea:</strong> Phishing awareness tools or network simulations (Cisco Packet Tracer) for training and testing.</p>
-            <p class="fun-note">Secure and educational, inspired by Ubuntu's community security focus.</p>
-          </div>
-        </div>
-
-        <div style="margin-top:1rem;display:flex;gap:10px;align-items:center">
-          <a class="fiverr-badge" href="https://www.fiverr.com/sibghatullah1a2a3a">All Fiverr Gigs</a>
-          <button class="btn" onclick="scrollTo('#contact')">Custom quote</button>
-        </div>
-      </section>
-
-      <section id="projects" class="section">
-        <h3 class="section-title">Selected Projects & Client Work</h3>
-        <div class="projects-grid">
-
-          <article class="project card" tabindex="0">
-            <img src="./assets/images/prj1.jpg" alt="Chess game screenshot" />
-            <div class="project-info">
-              <h4>Console Chess (C++)</h4>
-              <p>OOP, move rules, simple checkmate  a hands-on way I learned design patterns and game logic.</p>
-            </div>
-          </article>
-
-          <article class="project card" tabindex="0">
-            <img src="./assets/images/new.jpg" alt="Maze solver" />
-            <div class="project-info">
-              <h4>Maze Solver (BFS / DFS)</h4>
-              <p>Algorithm-driven solution that reads mazes and finds paths  stored results in JSON/SQLite for later analysis.</p>
-            </div>
-          </article>
-
-          <article class="project card" tabindex="0">
-            <img src="./assets/images/blog.jpg" alt="Blog app" />
-            <div class="project-info">
-              <h4>Full-stack Blog App</h4>
-              <p>React + Node + MongoDB, auth, CRUD, file uploads — a full project that taught me REST patterns and deployment basics.</p>
-            </div>
-          </article>
-
-          <article class="project card" tabindex="0">
-            <img src="./assets/images/phising .jpg" alt="Phishing awareness tool" />
-            <div class="project-info">
-              <h4>Phishing Awareness Tool</h4>
-              <p>Ethical simulation to teach users; no sensitive data stored built for awareness and education.</p>
-            </div>
-          </article>
-
-          <article class="project card" tabindex="0">
-            <img src="./assets/images/cn.png" alt="Network for Siber Koza" />
-            <div class="project-info">
-              <h4>Network Deployment & Simulation  <strong>Siber Koza</strong></h4>
-              <p>Designed a Cisco Packet Tracer network for Siber Koza to simulate routing, VLANs, and ACLs  used for training and pre-deployment testing.</p>
-            </div>
-          </article>
-
-        </div>
-
-        <div style="margin-top:1rem">
-          <h4 style="margin:0 0 8px 0">Client testimonial</h4>
-          <div class="testimonials">
-            
-            <div class="testimonial">
-              <strong>Avais  Siber Koza (simulated network)</strong>
-              <p style="color:var(--muted);margin-top:6px">"Sibghatullah built a clear Packet Tracer simulation and helped our team test failover scenarios. Fast, communicative, and very patient with changes."</p>
-            </div>
-
-            <div class="testimonial">
-              <div style="font-weight:800">Fiverr demo client</div>
-              <p style="color:var(--muted);margin-top:6px">"Delivered a clean React landing page with deployment instructions. Great communication and quick turnaround."</p>
-            </div>
-          </div>
-        </div>
-
-      </section>
-
-      <section id="about" class="section">
-        <h3 class="section-title">About me</h3>
-        <div class="about-grid">
-          <div class="about-card">
-            <img src="./assets/images/img.jpg" alt="profile" style="width:100%;border-radius:50%;margin-bottom:0.6rem; border:2px solid var(--accent);"/>
-            <div style="font-weight:800;color:var(--accent)">Sibghatullah  BSIT</div>
-          </div>
-          <div>
-            <h4 style="margin-top:0">From Code to Cloud: My Ubuntu-Inspired Journey</h4>
-            <p style="color:var(--muted)">I’m an aspiring IT professional exploring web development, Android apps, security, and networking with a passion for open-source principles like Ubuntu. I learn quickly, collaborate openly, and build with accessibility in mind. This portfolio reflects my builds, learnings, and problem-solving  all with clarity, curiosity, and community spirit.</p>
-            <div class="terminal-about">
-$ whoami
-Sibghatullah, Web & Android Developer
-$ skills
-Front-end: HTML, CSS, JavaScript, React
-Android: Flutter, React Native
-Backend: Flask, Firebase, MongoDB, Node.js
-Cloud: Azure, Hostinger, GitHub Actions
-$ motto
-"Build for humans, inspired by open source."
-            </div>
-            <p style="margin-top:0.6rem"><a class="cta" href="SIBGHATULLAH_BSIT_resume.pdf" download>Download Resume</a></p>
-          </div>
-        </div>
-      </section>
-
-      <section id="contact" class="section">
-        <h3 class="section-title">Let’s Talk</h3>
-        <div class="contact-grid">
-          <div class="contact-item">
-            <h4>Phone</h4>
-            <p>+92 00000000</p>
-          </div>
-          <div class="contact-item">
-            <h4>Email</h4>
-            <p><a href="mailto:sibghatullah1a2a3a@gmail.com">sibghatullah1a2a3a@gmail.com</a></p>
-          </div>
-          <div class="contact-item">
-            <h4>Location</h4>
-            <p>Rawalpindi, Pakistan</p>
-          </div>
-        </div>
-
-        <div style="margin-top:1rem;display:flex;gap:10px;align-items:center">
-          <button class="btn" onclick="openChatDemo()">Open hiring chat (demo)</button>
-          <a class="btn primary" href="https://www.fiverr.com/sibghatullah1a2a3a">Hire on Fiverr</a>
-        </div>
-      </section>
-
-    </main>
-
-    <div class="floating-tech" aria-hidden="true">
-      <img src="./assets/icons/web-developer.gif" alt="html5" style="transform:translateX(-6px) rotate(-6deg)" />
-      <img src="./assets/icons/responsive.gif" alt="responsive" style="transform:translateX(2px) rotate(4deg)" />
-      <img src="./assets/icons/font.gif" alt="design" style="transform:translateX(-1px) rotate(-2deg)" />
-    </div>
-
-    <div class="sparkle">Open for Projects ✨</div>
-
-    <!-- Chat demo (hidden until opened) -->
-    <div id="chatDemo" class="chat-demo" style="display:none;" aria-hidden="true">
-      <div class="chat-head">$ chat --hiring-demo</div>
-      <div class="chat-body" id="chatBody">
-        <div class="chat-msg client">Hi Sibghat, I need a web + app setup. Can you help?</div>
-        <div class="chat-msg me">Yes Shared backend, real-time sync. ETA: 5-7 days. Let's discuss specs.</div>
       </div>
-      <div style="padding:0.6rem;display:flex;gap:8px;background:linear-gradient(180deg,transparent,rgba(0,0,0,0.02))">
-        <input id="chatInput" placeholder="Type a quick note (demo)" style="flex:1;padding:0.5rem;border-radius:8px;border:1px solid rgba(255,255,255,0.2)" />
-        <button class="btn" onclick="sendDemoMsg()">Send</button>
-      </div>
-    </div>
-
-    <footer>
+    </section>
+    
+    <!-- ================================================================
+         Skills Section
+         ================================================================ -->
+    <section id="skills" class="skills-section" aria-labelledby="skills-title">
       <div class="container">
-        <div style="display:flex;justify-content:center;gap:12px;align-items:center;margin-bottom:10px">
-          <a href="https://www.linkedin.com/in/sibghat-ullah-8490aa279" aria-label="LinkedIn"><img src="./assets/icons/linkedin.png" width="28"/></a>
-          <a href="https://github.com/Sibghatullah-pk" aria-label="GitHub"><img src="./assets/icons/github.png" width="28"/></a>
-          <a href="https://www.instagram.com/sibghat_.ullah/" aria-label="Instagram"><img src="./assets/icons/ins.png" width="28"/></a>
+        <header class="section-header">
+          <h2 id="skills-title" class="section-title">Skills & Technologies</h2>
+          <p class="section-subtitle">
+            Honest assessment of my abilities after ~1 year of learning. Continuously improving!
+          </p>
+        </header>
+        
+        <div class="skills-grid">
+          <!-- Frontend -->
+          <div class="skill-category">
+            <h3 class="skill-category__title">
+              <span class="skill-category__icon">🎨</span> Frontend
+            </h3>
+            
+            <div class="skill-bar">
+              <div class="skill-bar__header">
+                <span class="skill-bar__name">HTML & CSS</span>
+                <span class="skill-bar__level">Intermediate</span>
+              </div>
+              <div class="skill-bar__track">
+                <div class="skill-bar__fill" data-level="70" style="width: 0%;"></div>
+              </div>
+            </div>
+            
+            <div class="skill-bar">
+              <div class="skill-bar__header">
+                <span class="skill-bar__name">JavaScript</span>
+                <span class="skill-bar__level">Intermediate</span>
+              </div>
+              <div class="skill-bar__track">
+                <div class="skill-bar__fill" data-level="60" style="width: 0%;"></div>
+              </div>
+            </div>
+            
+            <div class="skill-bar">
+              <div class="skill-bar__header">
+                <span class="skill-bar__name">React</span>
+                <span class="skill-bar__level">Beginner+</span>
+              </div>
+              <div class="skill-bar__track">
+                <div class="skill-bar__fill" data-level="45" style="width: 0%;"></div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Backend -->
+          <div class="skill-category">
+            <h3 class="skill-category__title">
+              <span class="skill-category__icon">⚙️</span> Backend
+            </h3>
+            
+            <div class="skill-bar">
+              <div class="skill-bar__header">
+                <span class="skill-bar__name">Node.js</span>
+                <span class="skill-bar__level">Beginner+</span>
+              </div>
+              <div class="skill-bar__track">
+                <div class="skill-bar__fill" data-level="45" style="width: 0%;"></div>
+              </div>
+            </div>
+            
+            <div class="skill-bar">
+              <div class="skill-bar__header">
+                <span class="skill-bar__name">MongoDB</span>
+                <span class="skill-bar__level">Beginner+</span>
+              </div>
+              <div class="skill-bar__track">
+                <div class="skill-bar__fill" data-level="40" style="width: 0%;"></div>
+              </div>
+            </div>
+            
+            <div class="skill-bar">
+              <div class="skill-bar__header">
+                <span class="skill-bar__name">Firebase</span>
+                <span class="skill-bar__level">Beginner+</span>
+              </div>
+              <div class="skill-bar__track">
+                <div class="skill-bar__fill" data-level="50" style="width: 0%;"></div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Mobile -->
+          <div class="skill-category">
+            <h3 class="skill-category__title">
+              <span class="skill-category__icon">📱</span> Mobile
+            </h3>
+            
+            <div class="skill-bar">
+              <div class="skill-bar__header">
+                <span class="skill-bar__name">Flutter</span>
+                <span class="skill-bar__level">Intermediate</span>
+              </div>
+              <div class="skill-bar__track">
+                <div class="skill-bar__fill" data-level="55" style="width: 0%;"></div>
+              </div>
+            </div>
+            
+            <div class="skill-bar">
+              <div class="skill-bar__header">
+                <span class="skill-bar__name">React Native</span>
+                <span class="skill-bar__level">Beginner+</span>
+              </div>
+              <div class="skill-bar__track">
+                <div class="skill-bar__fill" data-level="45" style="width: 0%;"></div>
+              </div>
+            </div>
+
+            <div class="skill-bar">
+              <div class="skill-bar__header">
+                <span class="skill-bar__name">Dart</span>
+                <span class="skill-bar__level">Intermediate</span>
+              </div>
+              <div class="skill-bar__track">
+                <div class="skill-bar__fill" data-level="50" style="width: 0%;"></div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- DevOps & Cloud -->
+          <div class="skill-category">
+            <h3 class="skill-category__title">
+              <span class="skill-category__icon">🚀</span> DevOps & Cloud
+            </h3>
+            
+            <div class="skill-bar">
+              <div class="skill-bar__header">
+                <span class="skill-bar__name">Docker</span>
+                <span class="skill-bar__level">Intermediate</span>
+              </div>
+              <div class="skill-bar__track">
+                <div class="skill-bar__fill" data-level="55" style="width: 0%;"></div>
+              </div>
+            </div>
+            
+            <div class="skill-bar">
+              <div class="skill-bar__header">
+                <span class="skill-bar__name">GitHub Actions</span>
+                <span class="skill-bar__level">Intermediate</span>
+              </div>
+              <div class="skill-bar__track">
+                <div class="skill-bar__fill" data-level="60" style="width: 0%;"></div>
+              </div>
+            </div>
+            
+            <div class="skill-bar">
+              <div class="skill-bar__header">
+                <span class="skill-bar__name">Azure / Cloud</span>
+                <span class="skill-bar__level">Beginner+</span>
+              </div>
+              <div class="skill-bar__track">
+                <div class="skill-bar__fill" data-level="40" style="width: 0%;"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Tools & Other -->
+          <div class="skill-category">
+            <h3 class="skill-category__title">
+              <span class="skill-category__icon">🛠️</span> Tools & Languages
+            </h3>
+            
+            <div class="skill-bar">
+              <div class="skill-bar__header">
+                <span class="skill-bar__name">Git & GitHub</span>
+                <span class="skill-bar__level">Intermediate</span>
+              </div>
+              <div class="skill-bar__track">
+                <div class="skill-bar__fill" data-level="65" style="width: 0%;"></div>
+              </div>
+            </div>
+            
+            <div class="skill-bar">
+              <div class="skill-bar__header">
+                <span class="skill-bar__name">Python</span>
+                <span class="skill-bar__level">Intermediate</span>
+              </div>
+              <div class="skill-bar__track">
+                <div class="skill-bar__fill" data-level="55" style="width: 0%;"></div>
+              </div>
+            </div>
+            
+            <div class="skill-bar">
+              <div class="skill-bar__header">
+                <span class="skill-bar__name">C++</span>
+                <span class="skill-bar__level">Intermediate</span>
+              </div>
+              <div class="skill-bar__track">
+                <div class="skill-bar__fill" data-level="55" style="width: 0%;"></div>
+              </div>
+            </div>
+          </div>
         </div>
-        <p>© 2025 Sibghatullah - Crafted with Ubuntu spirit</p>
       </div>
-    </footer>
-
-    <script>
-      function scrollTo(sel){document.querySelector(sel).scrollIntoView({behavior:'smooth',block:'start'})}
-      const themeToggle=document.getElementById('themeToggle');const stored=localStorage.getItem('theme');if(stored){document.documentElement.setAttribute('data-theme',stored)}else{const hour=new Date().getHours();if(hour>=18||hour<6)document.documentElement.setAttribute('data-theme','dark')}
-      themeToggle.addEventListener('click',()=>{const cur=document.documentElement.getAttribute('data-theme');const next=cur==='dark'?'light':'dark';document.documentElement.setAttribute('data-theme',next);localStorage.setItem('theme',next)})
-      const words=['Web developer','Android builder','DevOps explorer','Security tinkerer','Network architect'];let idx=0,letter=0,forward=true;const tw=document.getElementById('typewriter');function type(){const w=words[idx];if(forward){letter++;if(letter> w.length){forward=false;setTimeout(type,1000);return}}else{letter--;if(letter===0){forward=true;idx=(idx+1)%words.length}}tw.textContent=w.substring(0,letter);setTimeout(type,forward?120:50)}type();
-      document.querySelectorAll('.project').forEach(card=>{card.addEventListener('keydown',e=>{if(e.key==='Enter')card.click()})})
-      const techs=document.querySelectorAll('.floating-tech img');let t=0;setInterval(()=>{techs.forEach((img,i)=>img.style.transform=`translateY(${Math.sin((t+i)/10)*6}px) rotate(${Math.sin((t+i)/20)*6}deg)`);t++},80)
-
-      // Fiverr badge helper
-      document.querySelectorAll('[data-href]').forEach(b=>{b.addEventListener('click',e=>{const url=b.getAttribute('data-href');if(url&&url!=='REPLACE_WITH_FIVERR_LINK'){window.open(url,'_blank')}else{alert('Please replace the Fiverr link (data-href) in the HTML with your Fiverr profile URL to enable this button.')}})})
-
-      // Chat demo helpers
-      function openChatDemo(){document.getElementById('chatDemo').style.display='block';document.getElementById('chatDemo').setAttribute('aria-hidden','false');document.getElementById('chatBody').scrollTop=document.getElementById('chatBody').scrollHeight}
-      function sendDemoMsg(){const input=document.getElementById('chatInput');if(!input.value.trim())return;const body=document.getElementById('chatBody');const el=document.createElement('div');el.className='chat-msg me';el.textContent=input.value;body.appendChild(el);input.value='';body.scrollTop=body.scrollHeight}
-
-    </script>
-  </body>
+    </section>
+    
+    <!-- ================================================================
+         Services Section
+         ================================================================ -->
+    <section id="services" class="services-section" aria-labelledby="services-title">
+      <div class="container">
+        <header class="section-header">
+          <h2 id="services-title" class="section-title">Services & Fiverr Gigs</h2>
+          <p class="section-subtitle">
+            Quality work with Ubuntu-style reliability. Clear communication, honest timelines.
+          </p>
+        </header>
+        
+        <div class="services-grid">
+          <article class="service-card">
+            <h3 class="service-card__title">🌐 Web + Android with Shared Backend</h3>
+            <p class="service-card__desc">
+              Build a responsive website and Android app sharing a single backend (Node.js/Firebase). Real-time data sync across platforms.
+            </p>
+            <p class="service-card__note">
+              Like Ubuntu's unity: one ecosystem, multiple devices. Includes Azure deployment.
+            </p>
+            <a href="https://www.fiverr.com/s/5rLWLrk" class="fiverr-badge" target="_blank" rel="noopener noreferrer">View Gig</a>
+          </article>
+          
+          <article class="service-card">
+            <h3 class="service-card__title">📱 Convert Website to Android App</h3>
+            <p class="service-card__desc">
+              Transform your site into a native-feeling Android app with offline access, push notifications, and Play Store preparation.
+            </p>
+            <p class="service-card__note">
+              Mobile-first approach. Quick turnaround for startups and students.
+            </p>
+            <a href="https://www.fiverr.com/s/VY1x1Yx" class="fiverr-badge" target="_blank" rel="noopener noreferrer">View Gig</a>
+          </article>
+          
+          <article class="service-card">
+            <h3 class="service-card__title">💻 Design & Deploy Responsive Website</h3>
+            <p class="service-card__desc">
+              Modern, SEO-friendly site with React/Flask, deployed on Azure/Hostinger. Mobile-first and scalable architecture.
+            </p>
+            <p class="service-card__note">
+              Built to last, like Ubuntu LTS. Includes CI/CD setup for easy updates.
+            </p>
+            <a href="https://www.fiverr.com/s/jjrNryZ" class="fiverr-badge" target="_blank" rel="noopener noreferrer">View Gig</a>
+          </article>
+          
+          <article class="service-card">
+            <h3 class="service-card__title">🔒 Security & Networking Demos</h3>
+            <p class="service-card__desc">
+              Phishing awareness tools or network simulations (Cisco Packet Tracer) for training and educational purposes.
+            </p>
+            <p class="service-card__note">
+              Secure and educational, inspired by Ubuntu's community security focus.
+            </p>
+            <a href="#contact" class="btn btn--secondary" onclick="scrollToSection('#contact'); return false;">Request Quote</a>
+          </article>
+        </div>
+        
+        <div class="contact-cta">
+          <a href="https://www.fiverr.com/sibghatullah1a2a3a" class="fiverr-badge" target="_blank" rel="noopener noreferrer">
+            View All Fiverr Gigs
+          </a>
+          <a href="#contact" class="btn btn--secondary" onclick="scrollToSection('#contact'); return false;">
+            Request Custom Quote
+          </a>
+        </div>
+      </div>
+    </section>
+    
+    <!-- ================================================================
+         Projects Section
+         ================================================================ -->
+    <section id="projects" class="projects-section" aria-labelledby="projects-title">
+      <div class="container">
+        <header class="section-header">
+          <h2 id="projects-title" class="section-title">Selected Projects</h2>
+          <p class="section-subtitle">
+            A showcase of my learning journey. Click any project for details.
+          </p>
+        </header>
+        
+        <!-- Filter Chips -->
+        <div class="filter-chips" role="group" aria-label="Filter projects by category">
+          <!-- Filters are loaded dynamically from projects.json -->
+          <button class="filter-chip filter-chip--active" data-filter="all" aria-pressed="true">All Projects</button>
+        </div>
+        
+        <!-- Projects Grid (loaded dynamically) -->
+        <div id="projectsGrid" class="projects-grid" aria-live="polite">
+          <!-- Projects are loaded from assets/data/projects.json via JavaScript -->
+          <div class="projects-loading" style="grid-column: 1 / -1; text-align: center; padding: 2rem;">
+            <p>Loading projects...</p>
+          </div>
+        </div>
+        
+        <!-- No-JS Fallback: Simple Project List -->
+        <noscript>
+          <div class="projects-list">
+            <div class="projects-list__item">
+              <h3>Console Chess (C++)</h3>
+              <p>OOP chess game with move validation and checkmate detection.</p>
+            </div>
+            <div class="projects-list__item">
+              <h3>Maze Solver (BFS/DFS)</h3>
+              <p>Algorithm-driven pathfinding with visualization.</p>
+            </div>
+            <div class="projects-list__item">
+              <h3>Full-stack Blog App</h3>
+              <p>React + Node.js + MongoDB blog with authentication.</p>
+            </div>
+            <div class="projects-list__item">
+              <h3>Phishing Awareness Tool</h3>
+              <p>Ethical security simulation for training.</p>
+            </div>
+            <div class="projects-list__item">
+              <h3>Network Simulation - Siber Koza</h3>
+              <p>Cisco Packet Tracer network with VLANs and ACLs.</p>
+            </div>
+          </div>
+        </noscript>
+        
+        <!-- Testimonials -->
+        <div class="testimonials mt-xl">
+          <h3 class="testimonials__title">What People Say</h3>
+          <div class="testimonials-grid">
+            <div class="testimonial-card">
+              <p class="testimonial-card__author">Avais — Siber Koza (Network Project)</p>
+              <p class="testimonial-card__text">
+                "Sibghatullah built a clear Packet Tracer simulation and helped our team test failover scenarios. Fast, communicative, and very patient with changes."
+              </p>
+            </div>
+            <div class="testimonial-card">
+              <p class="testimonial-card__author">Fiverr Client</p>
+              <p class="testimonial-card__text">
+                "Delivered a clean React landing page with deployment instructions. Great communication and quick turnaround."
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- ================================================================
+         About Section
+         ================================================================ -->
+    <section id="about" class="about-section" aria-labelledby="about-title">
+      <div class="container">
+        <header class="section-header">
+          <h2 id="about-title" class="section-title">About Me</h2>
+        </header>
+        
+        <div class="about-grid">
+          <!-- About Card -->
+          <div class="about-card">
+            <div class="about-card__avatar">
+              <img src="./assets/images/img.jpg" alt="Sibghatullah profile photo" loading="lazy" width="150" height="150">
+            </div>
+            <h3 class="about-card__name">Sibghatullah</h3>
+            <p class="about-card__title">BSIT Student • Air University</p>
+          </div>
+          
+          <!-- About Content -->
+          <div class="about-content">
+            <h3 class="about-content__title">From Code to Cloud: My Ubuntu-Inspired Journey</h3>
+            
+            <p class="about-content__text">
+              I'm an aspiring IT professional with about one year of hands-on experience in web development, Android apps, security, and networking. Currently pursuing my BSIT at Air University, Rawalpindi, I'm passionate about open-source principles and building accessible technology.
+            </p>
+            
+            <p class="about-content__text">
+              My approach mirrors Ubuntu's philosophy: community-driven, transparent, and built for everyone. I learn quickly, collaborate openly, and focus on delivering clean, documented code. Whether it's a React frontend, a Node.js API, or a network simulation, I aim for reliability and clarity.
+            </p>
+            
+            <p class="about-content__text">
+              <strong>Career Goal:</strong> Seeking internship opportunities in web development or DevOps where I can contribute to real projects while continuing to grow my skills.
+            </p>
+            
+            <!-- Terminal Style Bio -->
+            <div class="terminal-box" aria-label="Terminal style biography">
+              <div class="terminal-box__line">
+                <span class="terminal-box__prompt">$</span> whoami
+              </div>
+              <div class="terminal-box__output">Sibghatullah, Web & Android Developer, BSIT Student</div>
+              
+              <div class="terminal-box__line mt-sm">
+                <span class="terminal-box__prompt">$</span> cat skills.txt
+              </div>
+              <div class="terminal-box__output">
+                Frontend: HTML, CSS, JavaScript, React<br>
+                Mobile: Flutter, React Native<br>
+                Backend: Node.js, Firebase, MongoDB<br>
+                Cloud: Azure, GitHub Actions<br>
+                Other: C++, Cisco Packet Tracer
+              </div>
+              
+              <div class="terminal-box__line mt-sm">
+                <span class="terminal-box__prompt">$</span> echo $MOTTO
+              </div>
+              <div class="terminal-box__output">"Build for humans, inspired by open source."</div>
+            </div>
+            
+            <a href="SIBGHATULLAH_BSIT_resume.pdf" class="btn btn--primary btn--lg" download>
+              📄 Download Resume
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- ================================================================
+         Contact Section
+         ================================================================ -->
+    <section id="contact" class="contact-section" aria-labelledby="contact-title">
+      <div class="container">
+        <header class="section-header">
+          <h2 id="contact-title" class="section-title">Let's Connect</h2>
+          <p class="section-subtitle">
+            Have a project in mind? Let's discuss how I can help.
+          </p>
+        </header>
+        
+        <div class="contact-grid">
+          <!-- Contact Info -->
+          <div class="contact-info">
+            <div class="contact-item">
+              <div class="contact-item__icon">📧</div>
+              <div>
+                <p class="contact-item__label">Email</p>
+                <p class="contact-item__value">
+                  <a href="mailto:sibghatullah1a2a3a@gmail.com">sibghatullah1a2a3a@gmail.com</a>
+                </p>
+              </div>
+            </div>
+            
+            <div class="contact-item">
+              <div class="contact-item__icon">📍</div>
+              <div>
+                <p class="contact-item__label">Location</p>
+                <p class="contact-item__value">Rawalpindi, Pakistan</p>
+              </div>
+            </div>
+            
+            <div class="contact-item">
+              <div class="contact-item__icon">🎓</div>
+              <div>
+                <p class="contact-item__label">University</p>
+                <p class="contact-item__value">Air University, Rawalpindi</p>
+              </div>
+            </div>
+            
+            <div class="contact-item">
+              <div class="contact-item__icon">💼</div>
+              <div>
+                <p class="contact-item__label">Freelance</p>
+                <p class="contact-item__value">
+                  <a href="https://www.fiverr.com/sibghatullah1a2a3a" target="_blank" rel="noopener noreferrer">Fiverr Profile</a>
+                </p>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Contact Form -->
+          <form id="contactForm" class="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST" novalidate>
+            <!-- TODO: Replace YOUR_FORM_ID with actual Formspree form ID -->
+            <h3 class="contact-form__title">Send a Message</h3>
+            
+            <!-- Success Message -->
+            <div class="contact-form__success" role="alert">
+              ✅ Thank you! Your message has been sent successfully.
+            </div>
+            
+            <div class="form-group">
+              <label for="name" class="form-group__label">Name *</label>
+              <input type="text" id="name" name="name" class="form-group__input" required placeholder="Your name" autocomplete="name">
+              <span class="form-group__error">Please enter your name</span>
+            </div>
+            
+            <div class="form-group">
+              <label for="email" class="form-group__label">Email *</label>
+              <input type="email" id="email" name="email" class="form-group__input" required placeholder="your.email@example.com" autocomplete="email">
+              <span class="form-group__error">Please enter a valid email</span>
+            </div>
+            
+            <div class="form-group">
+              <label for="subject" class="form-group__label">Subject</label>
+              <input type="text" id="subject" name="subject" class="form-group__input" placeholder="Project inquiry">
+            </div>
+            
+            <div class="form-group">
+              <label for="message" class="form-group__label">Message *</label>
+              <textarea id="message" name="message" class="form-group__textarea" required placeholder="Tell me about your project..." rows="5"></textarea>
+              <span class="form-group__error">Please enter your message</span>
+            </div>
+            
+            <!-- Honeypot for spam prevention -->
+            <input type="text" name="_gotcha" style="display: none;">
+            
+            <button type="submit" class="btn btn--primary btn--lg" style="width: 100%;">
+              Send Message
+            </button>
+            
+            <p class="mt-md" style="font-size: 0.875rem; color: var(--text-muted); text-align: center;">
+              Or email me directly at <a href="mailto:sibghatullah1a2a3a@gmail.com">sibghatullah1a2a3a@gmail.com</a>
+            </p>
+          </form>
+        </div>
+        
+        <div class="contact-cta">
+          <button id="chatToggle" class="btn btn--secondary">
+            💬 Open Chat Demo
+          </button>
+          <a href="https://www.fiverr.com/sibghatullah1a2a3a" class="btn btn--primary" target="_blank" rel="noopener noreferrer">
+            Hire on Fiverr
+          </a>
+        </div>
+      </div>
+    </section>
+    
+  </main>
+  
+  <!-- ====================================================================
+       Footer
+       ==================================================================== -->
+  <footer class="footer" role="contentinfo">
+    <div class="container footer__inner">
+      <div class="footer__socials">
+        <a href="https://www.linkedin.com/in/sibghat-ullah-8490aa279" class="footer__social-link" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile">
+          <img src="./assets/icons/linkedin.png" alt="" width="24" height="24" loading="lazy">
+        </a>
+        <a href="https://github.com/Sibghatullah-pk" class="footer__social-link" target="_blank" rel="noopener noreferrer" aria-label="GitHub Profile">
+          <img src="./assets/icons/github.png" alt="" width="24" height="24" loading="lazy">
+        </a>
+        <a href="https://www.instagram.com/sibghat_.ullah/" class="footer__social-link" target="_blank" rel="noopener noreferrer" aria-label="Instagram Profile">
+          <img src="./assets/icons/ins.png" alt="" width="24" height="24" loading="lazy">
+        </a>
+      </div>
+      
+      <p class="footer__copyright">
+        © 2025 Sibghatullah — Crafted with Ubuntu spirit 🟠
+      </p>
+    </div>
+  </footer>
+  
+  <!-- ====================================================================
+       Floating Elements
+       ==================================================================== -->
+  
+  <!-- Floating Tech Icons (visible on large screens) -->
+  <aside class="floating-tech" aria-hidden="true">
+    <img src="./assets/icons/web-developer.gif" alt="" class="floating-tech__icon" loading="lazy">
+    <img src="./assets/icons/responsive.gif" alt="" class="floating-tech__icon" loading="lazy">
+    <img src="./assets/icons/font.gif" alt="" class="floating-tech__icon" loading="lazy">
+  </aside>
+  
+  <!-- Availability Badge -->
+  <div class="availability-badge" aria-hidden="true">
+    ✨ Open for Projects
+  </div>
+  
+  <!-- Chat Demo -->
+  <aside id="chatDemo" class="chat-demo" aria-label="Hiring chat demo">
+    <div class="chat-demo__header">
+      <span>$ chat --hiring-demo</span>
+      <button class="chat-demo__close" aria-label="Close chat demo">×</button>
+    </div>
+    <div class="chat-demo__body">
+      <div class="chat-demo__msg chat-demo__msg--client">
+        Hi Sibghat, I need a web + app setup. Can you help?
+      </div>
+      <div class="chat-demo__msg chat-demo__msg--me">
+        Yes! Shared backend, real-time sync. ETA: 5-7 days. Let's discuss specs.
+      </div>
+    </div>
+    <div class="chat-demo__footer">
+      <input type="text" id="chatInput" class="chat-demo__input" placeholder="Type a message (demo)...">
+      <button id="chatSend" class="btn btn--primary">Send</button>
+    </div>
+  </aside>
+  
+  <!-- ====================================================================
+       Project Modal
+       ==================================================================== -->
+  <div id="projectModal" class="modal" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="modalTitle">
+    <div class="modal__backdrop"></div>
+    <div class="modal__content">
+      <button class="modal__close" aria-label="Close modal">×</button>
+      <img class="modal__image" src="" alt="" loading="lazy">
+      <div class="modal__body">
+        <!-- Content populated dynamically by JavaScript -->
+      </div>
+    </div>
+  </div>
+  
+  <!-- ====================================================================
+       Scripts
+       ==================================================================== -->
+  <script src="./assets/js/main.js" defer></script>
+</body>
 </html>
 

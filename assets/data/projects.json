@@ -1,0 +1,533 @@
+{
+    "projects": [
+        {
+            "id": "console-chess",
+            "title": "Console Chess (C++)",
+            "shortDesc": "Object-oriented chess game with move validation and checkmate detection.",
+            "fullDesc": "A fully functional console-based chess game built in C++ demonstrating object-oriented programming principles. Features include complete move validation for all pieces, check/checkmate detection, turn-based gameplay, and a clean ASCII board display. This project helped me understand design patterns, game state management, and algorithmic thinking.",
+            "tags": [
+                "c++",
+                "oop",
+                "game-dev",
+                "algorithms"
+            ],
+            "tech": [
+                "C++",
+                "OOP",
+                "Data Structures"
+            ],
+            "image": "./assets/images/prj1.jpg",
+            "imagePlaceholder": "linear-gradient(135deg, #e95420 0%, #77216f 100%)",
+            "demoUrl": null,
+            "repoUrl": "https://github.com/Sibghatullah-pk",
+            "year": 2024,
+            "role": "Solo Developer",
+            "contributions": [
+                "Designed class hierarchy for chess pieces",
+                "Implemented move validation logic for all piece types",
+                "Built checkmate and stalemate detection algorithms",
+                "Created ASCII-based board rendering system"
+            ],
+            "featured": true
+        },
+        {
+            "id": "maze-solver",
+            "title": "Maze Solver (BFS/DFS)",
+            "shortDesc": "Algorithm-driven maze pathfinding with visualization and data export.",
+            "fullDesc": "An algorithm visualization tool that solves mazes using Breadth-First Search (BFS) and Depth-First Search (DFS) algorithms. The application reads maze configurations, finds optimal paths, and stores results in JSON/SQLite for analysis. Includes step-by-step visualization to understand how each algorithm explores the maze differently.",
+            "tags": [
+                "algorithms",
+                "python",
+                "data-structures",
+                "visualization"
+            ],
+            "tech": [
+                "Python",
+                "BFS",
+                "DFS",
+                "SQLite",
+                "JSON"
+            ],
+            "image": "./assets/images/new.jpg",
+            "imagePlaceholder": "linear-gradient(135deg, #77216f 0%, #300a24 100%)",
+            "demoUrl": null,
+            "repoUrl": "https://github.com/Sibghatullah-pk",
+            "year": 2024,
+            "role": "Solo Developer",
+            "contributions": [
+                "Implemented BFS and DFS pathfinding algorithms",
+                "Built maze parsing and validation system",
+                "Created data persistence layer with SQLite/JSON",
+                "Developed visual representation of algorithm execution"
+            ],
+            "featured": true
+        },
+        {
+            "id": "blog-app",
+            "title": "Full-stack Blog App",
+            "shortDesc": "Complete blog platform with React frontend, Node.js backend, and MongoDB.",
+            "fullDesc": "A full-stack blog application demonstrating modern web development practices. The frontend is built with React featuring responsive design and optimistic UI updates. The backend uses Node.js with Express, MongoDB for data storage, and JWT for authentication. Includes full CRUD operations, file uploads for images, user authentication, and comment system.",
+            "tags": [
+                "react",
+                "node",
+                "mongodb",
+                "full-stack",
+                "web-dev"
+            ],
+            "tech": [
+                "React",
+                "Node.js",
+                "Express",
+                "MongoDB",
+                "JWT",
+                "REST API"
+            ],
+            "image": "./assets/images/blog.jpg",
+            "imagePlaceholder": "linear-gradient(135deg, #e95420 0%, #c34113 100%)",
+            "demoUrl": null,
+            "repoUrl": "https://github.com/Sibghatullah-pk",
+            "year": 2024,
+            "role": "Solo Developer",
+            "contributions": [
+                "Built responsive React frontend with component architecture",
+                "Developed RESTful API with Node.js and Express",
+                "Implemented JWT-based authentication system",
+                "Designed MongoDB schema and data models",
+                "Added file upload functionality for blog images"
+            ],
+            "featured": true
+        },
+        {
+            "id": "phishing-tool",
+            "title": "Phishing Awareness Tool",
+            "shortDesc": "Ethical security simulation for phishing awareness training.",
+            "fullDesc": "An educational tool designed to raise awareness about phishing attacks in a controlled, ethical environment. The simulation demonstrates common phishing techniques without storing any sensitive data. Built for training purposes to help users recognize suspicious emails, fake login pages, and social engineering tactics. Includes detailed explanations of each technique and prevention tips.",
+            "tags": [
+                "security",
+                "python",
+                "education",
+                "ethical-hacking"
+            ],
+            "tech": [
+                "Python",
+                "Flask",
+                "HTML/CSS",
+                "Security Concepts"
+            ],
+            "image": "./assets/images/phising .jpg",
+            "imagePlaceholder": "linear-gradient(135deg, #300a24 0%, #77216f 100%)",
+            "demoUrl": null,
+            "repoUrl": "https://github.com/Sibghatullah-pk",
+            "year": 2024,
+            "role": "Solo Developer",
+            "contributions": [
+                "Designed ethical phishing simulation scenarios",
+                "Built educational content explaining attack vectors",
+                "Created interactive awareness training modules",
+                "Implemented safe demonstration environment"
+            ],
+            "featured": true
+        },
+        {
+            "id": "network-simulation",
+            "title": "Network Simulation - Siber Koza",
+            "shortDesc": "Enterprise network design with VLANs, routing, and ACLs using Cisco Packet Tracer.",
+            "fullDesc": "A comprehensive network simulation designed for Siber Koza to model enterprise-grade infrastructure. The project includes VLAN segmentation, inter-VLAN routing, access control lists (ACLs), and failover testing scenarios. Used for training network administrators and validating configurations before physical deployment. Demonstrates understanding of networking fundamentals and Cisco technologies.",
+            "tags": [
+                "networking",
+                "cisco",
+                "infrastructure",
+                "simulation"
+            ],
+            "tech": [
+                "Cisco Packet Tracer",
+                "VLANs",
+                "Routing Protocols",
+                "ACLs",
+                "Network Security"
+            ],
+            "image": "./assets/images/cn.png",
+            "imagePlaceholder": "linear-gradient(135deg, #2c001e 0%, #e95420 100%)",
+            "demoUrl": null,
+            "repoUrl": null,
+            "year": 2024,
+            "role": "Network Designer",
+            "contributions": [
+                "Designed multi-tier network architecture",
+                "Configured VLAN segmentation for security",
+                "Implemented routing protocols and ACLs",
+                "Created failover testing scenarios",
+                "Documented network topology and configurations"
+            ],
+            "featured": true
+        },
+        {
+            "id": "finance-tracker-flutter",
+            "title": "Finance Tracker App",
+            "shortDesc": "Cross-platform mobile app for personal finance management built with Flutter.",
+            "fullDesc": "A feature-rich personal finance tracking application developed using Flutter and Dart. The app allows users to track income, expenses, set budgets, and visualize spending patterns through interactive charts. Features include category-based expense tracking, recurring transactions, data export, and beautiful Material Design UI. Demonstrates proficiency in mobile development and state management.",
+            "tags": [
+                "mobile",
+                "flutter",
+                "dart",
+                "finance"
+            ],
+            "tech": [
+                "Flutter",
+                "Dart",
+                "SQLite",
+                "Provider",
+                "Material Design"
+            ],
+            "image": null,
+            "imagePlaceholder": "linear-gradient(135deg, #02569B 0%, #0175C2 100%)",
+            "demoUrl": null,
+            "repoUrl": "https://github.com/Sibghatullah-pk/FinanceTracker",
+            "year": 2024,
+            "role": "Mobile Developer",
+            "contributions": [
+                "Built cross-platform app with single codebase",
+                "Implemented local SQLite database for offline storage",
+                "Created interactive charts for expense visualization",
+                "Designed intuitive UI following Material Design guidelines"
+            ],
+            "featured": true
+        },
+        {
+            "id": "honeypot-security",
+            "title": "SNA HoneyPot Security Tool",
+            "shortDesc": "Windows-based honeypot system for network security analysis and threat detection.",
+            "fullDesc": "A sophisticated honeypot security tool built in Python for Windows environments. This project implements a deceptive network service that attracts and logs malicious activities, helping security teams understand attack patterns and improve defenses. Features include real-time logging, attack pattern analysis, alert systems, and detailed reporting. Part of Social Network Analysis security research.",
+            "tags": [
+                "security",
+                "python",
+                "devops",
+                "networking"
+            ],
+            "tech": [
+                "Python",
+                "Windows Security",
+                "Network Analysis",
+                "Logging Systems",
+                "Threat Detection"
+            ],
+            "image": null,
+            "imagePlaceholder": "linear-gradient(135deg, #300a24 0%, #e95420 100%)",
+            "demoUrl": null,
+            "repoUrl": "https://github.com/Sibghatullah-pk/SNA_HoneyPot_Windows",
+            "year": 2024,
+            "role": "Security Developer",
+            "contributions": [
+                "Developed honeypot service to attract attackers",
+                "Implemented real-time logging and monitoring",
+                "Created attack pattern analysis algorithms",
+                "Built automated alerting system"
+            ],
+            "featured": true
+        },
+        {
+            "id": "medical-chatbot",
+            "title": "Medical AI Chatbot",
+            "shortDesc": "AI-powered healthcare assistant using NLP for medical queries and information.",
+            "fullDesc": "An intelligent medical chatbot leveraging natural language processing and machine learning to assist users with health-related queries. The system provides information about symptoms, potential conditions, and general health advice while clearly directing users to seek professional medical help for serious concerns. Built using Python, Jupyter Notebooks, and modern NLP libraries.",
+            "tags": [
+                "ai-ml",
+                "python",
+                "healthcare",
+                "nlp"
+            ],
+            "tech": [
+                "Python",
+                "Jupyter Notebook",
+                "NLP Libraries",
+                "Machine Learning",
+                "Flask API"
+            ],
+            "image": null,
+            "imagePlaceholder": "linear-gradient(135deg, #16a085 0%, #27ae60 100%)",
+            "demoUrl": null,
+            "repoUrl": "https://github.com/Sibghatullah-pk/MEDICALCHATBOT",
+            "year": 2024,
+            "role": "AI Developer",
+            "contributions": [
+                "Trained NLP model on medical datasets",
+                "Implemented intent recognition for health queries",
+                "Built conversational flow with context retention",
+                "Created API endpoints for integration"
+            ],
+            "featured": true
+        },
+        {
+            "id": "devops-docker",
+            "title": "DevOps Docker Infrastructure",
+            "shortDesc": "Containerized application deployment with Docker, CI/CD pipelines, and orchestration.",
+            "fullDesc": "A comprehensive DevOps project demonstrating containerization best practices with Docker. Includes multi-container applications, Docker Compose configurations, CI/CD pipeline integration, and container orchestration patterns. Features automated builds, testing pipelines, and deployment strategies for production environments.",
+            "tags": [
+                "devops",
+                "docker",
+                "ci-cd",
+                "infrastructure"
+            ],
+            "tech": [
+                "Docker",
+                "Docker Compose",
+                "GitHub Actions",
+                "Linux",
+                "Shell Scripting"
+            ],
+            "image": null,
+            "imagePlaceholder": "linear-gradient(135deg, #2496ED 0%, #0db7ed 100%)",
+            "demoUrl": null,
+            "repoUrl": "https://github.com/Sibghatullah-pk/devops-directive-docker",
+            "year": 2024,
+            "role": "DevOps Engineer",
+            "contributions": [
+                "Created optimized Dockerfiles for multiple services",
+                "Designed multi-container architecture with Compose",
+                "Implemented CI/CD pipelines with GitHub Actions",
+                "Documented deployment and scaling strategies"
+            ],
+            "featured": true
+        },
+        {
+            "id": "github-actions-cicd",
+            "title": "GitHub Actions CI/CD Project",
+            "shortDesc": "Automated testing, building, and deployment workflows using GitHub Actions.",
+            "fullDesc": "A demonstration project showcasing advanced GitHub Actions capabilities for continuous integration and deployment. Features include automated testing on multiple environments, build optimization, artifact management, deployment to various platforms, and reusable workflow patterns. Serves as a reference implementation for DevOps best practices.",
+            "tags": [
+                "devops",
+                "ci-cd",
+                "automation",
+                "github"
+            ],
+            "tech": [
+                "GitHub Actions",
+                "YAML",
+                "Shell Scripting",
+                "Docker",
+                "Node.js"
+            ],
+            "image": null,
+            "imagePlaceholder": "linear-gradient(135deg, #24292e 0%, #586069 100%)",
+            "demoUrl": null,
+            "repoUrl": "https://github.com/Sibghatullah-pk/Github-Actions-Project",
+            "year": 2024,
+            "role": "DevOps Engineer",
+            "contributions": [
+                "Created reusable workflow templates",
+                "Implemented matrix testing strategies",
+                "Built automated deployment pipelines",
+                "Documented workflow best practices"
+            ],
+            "featured": false
+        },
+        {
+            "id": "siber-koza-website",
+            "title": "Siber Koza Company Website",
+            "shortDesc": "Professional corporate website for Siber Koza cybersecurity company.",
+            "fullDesc": "A modern, professional corporate website designed and developed for Siber Koza, a cybersecurity consulting firm. The website features a sleek design showcasing company services, team profiles, case studies, and contact information. Built with responsive design principles, SEO optimization, and performance best practices. Includes content management capabilities and lead generation forms.",
+            "tags": [
+                "web-dev",
+                "client-work",
+                "corporate",
+                "responsive"
+            ],
+            "tech": [
+                "HTML5",
+                "CSS3",
+                "JavaScript",
+                "Responsive Design",
+                "SEO"
+            ],
+            "image": null,
+            "imagePlaceholder": "linear-gradient(135deg, #1a1a2e 0%, #16213e 100%)",
+            "demoUrl": null,
+            "repoUrl": "https://github.com/sgstudio230-dev/Siber_project_Timeline",
+            "year": 2024,
+            "role": "Web Developer",
+            "contributions": [
+                "Designed modern corporate UI/UX",
+                "Developed responsive frontend",
+                "Implemented SEO best practices",
+                "Created project timeline management",
+                "Optimized performance and accessibility"
+            ],
+            "featured": true
+        },
+        {
+            "id": "siber-koza-app",
+            "title": "Siber Koza Mobile App",
+            "shortDesc": "Cross-platform mobile application for Siber Koza client services and communications.",
+            "fullDesc": "A cross-platform mobile application developed for Siber Koza to enhance client engagement and service delivery. The app provides secure communication channels, service request management, incident reporting, and real-time notifications. Built with React Native for iOS and Android compatibility, featuring modern UI components and secure authentication.",
+            "tags": [
+                "mobile",
+                "react-native",
+                "client-work",
+                "security"
+            ],
+            "tech": [
+                "React Native",
+                "JavaScript",
+                "Redux",
+                "REST API",
+                "Push Notifications"
+            ],
+            "image": null,
+            "imagePlaceholder": "linear-gradient(135deg, #61dafb 0%, #282c34 100%)",
+            "demoUrl": null,
+            "repoUrl": null,
+            "year": 2024,
+            "role": "Mobile Developer",
+            "contributions": [
+                "Built cross-platform app with React Native",
+                "Implemented secure authentication system",
+                "Created service request workflow",
+                "Integrated push notifications",
+                "Designed intuitive user interface"
+            ],
+            "featured": true
+        },
+        {
+            "id": "flutter-login",
+            "title": "Flutter Authentication System",
+            "shortDesc": "Secure login and registration system with modern UI built in Flutter.",
+            "fullDesc": "A complete authentication system implementation in Flutter featuring secure login, registration, password recovery, and session management. The project demonstrates Flutter best practices including state management, form validation, API integration, and beautiful Material Design components. Serves as a reusable authentication module for Flutter applications.",
+            "tags": [
+                "mobile",
+                "flutter",
+                "dart",
+                "authentication"
+            ],
+            "tech": [
+                "Flutter",
+                "Dart",
+                "Firebase Auth",
+                "Provider",
+                "Material Design"
+            ],
+            "image": null,
+            "imagePlaceholder": "linear-gradient(135deg, #02569B 0%, #13B9FD 100%)",
+            "demoUrl": null,
+            "repoUrl": "https://github.com/Sibghatullah-pk/flUTTER-login",
+            "year": 2024,
+            "role": "Mobile Developer",
+            "contributions": [
+                "Implemented secure authentication flow",
+                "Created beautiful animated UI components",
+                "Built form validation with error handling",
+                "Integrated Firebase authentication"
+            ],
+            "featured": false
+        },
+        {
+            "id": "weather-app",
+            "title": "Weather Application",
+            "shortDesc": "Real-time weather app with location-based forecasts and beautiful UI.",
+            "fullDesc": "A modern weather application providing real-time weather data, forecasts, and location-based services. Features include current conditions, hourly and daily forecasts, weather alerts, and a visually appealing interface with dynamic backgrounds based on weather conditions. Integrates with weather APIs for accurate, up-to-date information.",
+            "tags": [
+                "web-dev",
+                "javascript",
+                "api",
+                "weather"
+            ],
+            "tech": [
+                "JavaScript",
+                "HTML5",
+                "CSS3",
+                "Weather API",
+                "Geolocation"
+            ],
+            "image": null,
+            "imagePlaceholder": "linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)",
+            "demoUrl": null,
+            "repoUrl": "https://github.com/Sibghatullah-pk/weather_App-MC",
+            "year": 2024,
+            "role": "Frontend Developer",
+            "contributions": [
+                "Integrated weather API for real-time data",
+                "Implemented geolocation services",
+                "Created dynamic UI based on weather conditions",
+                "Built responsive design for all devices"
+            ],
+            "featured": false
+        },
+        {
+            "id": "ngo-management",
+            "title": "NGO Management System",
+            "shortDesc": "Full-stack web application for NGO operations, donations, and volunteer management.",
+            "fullDesc": "A comprehensive web application built for NGO management, featuring donation tracking, volunteer coordination, event management, and reporting capabilities. Built with PHP and MySQL backend with a responsive frontend. Includes admin dashboard, donor management, campaign tracking, and financial reporting modules.",
+            "tags": [
+                "full-stack",
+                "php",
+                "mysql",
+                "management"
+            ],
+            "tech": [
+                "PHP",
+                "MySQL",
+                "HTML/CSS",
+                "JavaScript",
+                "Bootstrap"
+            ],
+            "image": null,
+            "imagePlaceholder": "linear-gradient(135deg, #667eea 0%, #764ba2 100%)",
+            "demoUrl": null,
+            "repoUrl": "https://github.com/Sibghatullah-pk/NGO_php_mysql",
+            "year": 2023,
+            "role": "Full Stack Developer",
+            "contributions": [
+                "Designed database schema for NGO operations",
+                "Built admin dashboard with analytics",
+                "Implemented donation tracking system",
+                "Created volunteer management module"
+            ],
+            "featured": false
+        }
+    ],
+    "filters": [
+        {
+            "id": "all",
+            "label": "All Projects"
+        },
+        {
+            "id": "web-dev",
+            "label": "Web Dev"
+        },
+        {
+            "id": "full-stack",
+            "label": "Full Stack"
+        },
+        {
+            "id": "mobile",
+            "label": "Mobile"
+        },
+        {
+            "id": "flutter",
+            "label": "Flutter"
+        },
+        {
+            "id": "devops",
+            "label": "DevOps"
+        },
+        {
+            "id": "security",
+            "label": "Security"
+        },
+        {
+            "id": "ai-ml",
+            "label": "AI/ML"
+        },
+        {
+            "id": "algorithms",
+            "label": "Algorithms"
+        },
+        {
+            "id": "networking",
+            "label": "Networking"
+        },
+        {
+            "id": "client-work",
+            "label": "Client Work"
+        }
+    ]
+}
