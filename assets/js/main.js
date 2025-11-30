@@ -16,7 +16,7 @@
 
     const CONFIG = {
         projectsDataUrl: './assets/data/projects.json',
-        formEndpoint: 'https://formspree.io/f/YOUR_FORM_ID', // TODO: Replace with actual Formspree ID
+        formEndpoint: 'https://formspree.io/f/xpwvqzjz',
         typewriterWords: [
             'Web Developer',
             'Flutter Developer',
