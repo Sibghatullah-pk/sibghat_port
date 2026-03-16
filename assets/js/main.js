@@ -367,7 +367,7 @@
             ).join('');
 
             const imageHtml = project.image ?
-                `<img src="${project.image}" alt="${project.title}" loading="lazy">` :
+                `<img src="${project.image}" alt="${project.title}" loading="lazy" onerror="this.parentElement.innerHTML='<div class=\\'project-card__placeholder\\' style=\\'background: ${project.imagePlaceholder || 'var(--accent-primary)'}\\'>${project.imagePlaceholder ? '🎨' : '📁'}</div>'">` :
                 `<div class="project-card__placeholder" style="background: ${project.imagePlaceholder || 'var(--accent-primary)'}">📁</div>`;
 
             return `

@@ -1,0 +1,178 @@
+{
+    "skills": {
+        "frontend": [
+            {
+                "name": "HTML5 & CSS3",
+                "proficiency": 98,
+                "category": "Frontend Technologies"
+            },
+            {
+                "name": "JavaScript (ES6+)",
+                "proficiency": 95,
+                "category": "Frontend Technologies"
+            },
+            {
+                "name": "React.js",
+                "proficiency": 92,
+                "category": "Frontend Technologies"
+            },
+            {
+                "name": "TypeScript",
+                "proficiency": 88,
+                "category": "Frontend Technologies"
+            },
+            {
+                "name": "Responsive Design",
+                "proficiency": 97,
+                "category": "Frontend Technologies"
+            },
+            {
+                "name": "Next.js",
+                "proficiency": 85,
+                "category": "Frontend Technologies"
+            }
+        ],
+        "backend": [
+            {
+                "name": "Node.js",
+                "proficiency": 92,
+                "category": "Backend Technologies"
+            },
+            {
+                "name": "Express.js",
+                "proficiency": 90,
+                "category": "Backend Technologies"
+            },
+            {
+                "name": "Python (Django/Flask)",
+                "proficiency": 82,
+                "category": "Backend Technologies"
+            },
+            {
+                "name": "RESTful & GraphQL APIs",
+                "proficiency": 94,
+                "category": "Backend Technologies"
+            },
+            {
+                "name": "Microservices Architecture",
+                "proficiency": 85,
+                "category": "Backend Technologies"
+            }
+        ],
+        "mobile": [
+            {
+                "name": "Flutter",
+                "proficiency": 90,
+                "category": "Mobile Development"
+            },
+            {
+                "name": "React Native",
+                "proficiency": 85,
+                "category": "Mobile Development"
+            },
+            {
+                "name": "Dart",
+                "proficiency": 88,
+                "category": "Mobile Development"
+            },
+            {
+                "name": "Native iOS/Android",
+                "proficiency": 80,
+                "category": "Mobile Development"
+            }
+        ],
+        "database": [
+            {
+                "name": "MongoDB",
+                "proficiency": 90,
+                "category": "Data & Cloud Platforms"
+            },
+            {
+                "name": "Firebase",
+                "proficiency": 92,
+                "category": "Data & Cloud Platforms"
+            },
+            {
+                "name": "PostgreSQL/SQL",
+                "proficiency": 85,
+                "category": "Data & Cloud Platforms"
+            },
+            {
+                "name": "AWS/Azure/GCP",
+                "proficiency": 82,
+                "category": "Data & Cloud Platforms"
+            }
+        ],
+        "devops": [
+            {
+                "name": "Git & Version Control",
+                "proficiency": 95,
+                "category": "DevOps & Tools"
+            },
+            {
+                "name": "Docker & Kubernetes",
+                "proficiency": 80,
+                "category": "DevOps & Tools"
+            },
+            {
+                "name": "Agile/Scrum/Kanban",
+                "proficiency": 90,
+                "category": "DevOps & Tools"
+            },
+            {
+                "name": "UI/UX Design & Figma",
+                "proficiency": 85,
+                "category": "DevOps & Tools"
+            },
+            {
+                "name": "CI/CD Pipelines",
+                "proficiency": 87,
+                "category": "DevOps & Tools"
+            },
+            {
+                "name": "Linux & Shell Scripting",
+                "proficiency": 83,
+                "category": "DevOps & Tools"
+            }
+        ]
+    },
+    "experience": [
+        {
+            "id": "senior-consultant",
+            "position": "Senior Full-Stack Engineer",
+            "company": "Independent Consultant (Fiverr & Upwork)",
+            "period": "2025 - Present",
+            "description": "Providing comprehensive web and mobile development services to international clientele. Expertise in architecting scalable applications using React, Node.js, and Flutter, with a focus on performance optimization and user-centric design.",
+            "highlights": [
+                "Architected 30+ enterprise web platforms",
+                "Deployed 15+ cross-platform mobile applications",
+                "Maintained perfect 5-star ratings across 40+ engagements",
+                "Consistently exceeded timelines by 2 weeks average"
+            ]
+        },
+        {
+            "id": "tech-innovate",
+            "position": "Full-Stack Developer",
+            "company": "TechInnovate Solutions",
+            "period": "2025 - Present",
+            "description": "Collaborated on cross-functional teams designing, developing, and deploying scalable web applications with focus on code quality and system reliability.",
+            "highlights": [
+                "Optimized application performance, reducing load times by 60%",
+                "Implemented CI/CD pipelines, streamlining deployments by 40%",
+                "Mentored junior engineers on best practices"
+            ]
+        },
+        {
+            "id": "tech-education",
+            "position": "BS Information Technology (BSIT)",
+            "company": "Air University, Islamabad",
+            "period": "2021 - 2025",
+            "description": "Completed graduation while developing real-world projects and freelancing. Built foundational expertise in algorithms, software design patterns, and emerging technologies.",
+            "highlights": [
+                "Undergraduate with distinction and academic honors",
+                "Developed 15+ projects spanning web and mobile domains",
+                "Successfully competed in multiple hackathons"
+            ]
+        }
+    ]
+}
